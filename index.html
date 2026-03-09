@@ -35,7 +35,7 @@
       background: var(--black);
       padding: 48px 0 44px;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .hero::before {
@@ -106,11 +106,9 @@
       font-size: 10px;
     }
 
-    .badge span {
-      display: inline-block;
-      width: 6px; height: 6px;
-      background: var(--mint);
-      border-radius: 50%;
+    .badge svg {
+      border-radius: 2px;
+      flex-shrink: 0;
     }
 
     .hero h1 {
@@ -118,9 +116,10 @@
       font-weight: 800;
       font-size: clamp(32px, 5vw, 52px);
       color: var(--white);
-      line-height: 1.15;
+      line-height: 1.2;
       letter-spacing: -0.02em;
       margin-bottom: 20px;
+      padding-bottom: 4px;
     }
 
     .hero h1 em {
@@ -558,7 +557,7 @@
       <img src="https://framerusercontent.com/images/cqIDj9sk1fQiszAbKgUfv8ZmJxE.png?scale-down-to=512&width=1985&height=512" alt="Throxy" />
     </a>
 
-    <div class="badge"><span></span> YC X25 &nbsp;·&nbsp; London</div>
+    <div class="badge"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M0 0H18V18H0V0Z" fill="#FB651E"/><path d="M8.39429 10.1783L5.30469 4.39062H6.71663L8.53407 8.05334C8.56205 8.11859 8.59468 8.18616 8.63195 8.25605C8.66921 8.32595 8.70184 8.39823 8.72975 8.47276C8.74845 8.50074 8.76237 8.52634 8.77173 8.54968C8.78108 8.57288 8.79036 8.59398 8.79971 8.61254C8.84461 8.70202 8.88658 8.79293 8.92557 8.88514C8.96284 8.97373 8.99539 9.0553 9.02331 9.12983C9.09791 8.97134 9.17947 8.80126 9.26799 8.61957C9.35659 8.43781 9.44743 8.24902 9.54059 8.05334L11.386 4.39062H12.7002L9.5825 10.2482V13.9809H8.39422L8.39429 10.1783Z" fill="white"/></svg> YC X25 &nbsp;·&nbsp; London</div>
 
     <h1>Customer<br><em>Success</em><br>Manager</h1>
 
