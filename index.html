@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Customer Success Manager - Throxy</title>
+  <title>Careers - Throxy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -30,34 +29,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── HERO ─────────────────────────────────────────────── */
     .hero {
       background: var(--black);
       padding: 48px 0 44px;
       position: relative;
       overflow: visible;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -120px; right: -120px;
-      width: 360px; height: 360px;
-      background: var(--purple);
-      opacity: 0.08;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: 40px;
-      width: 220px; height: 220px;
-      background: var(--mint);
-      opacity: 0.07;
-      border-radius: 50%;
-      pointer-events: none;
     }
 
     .hero-inner {
@@ -113,7 +89,7 @@
       color: var(--white);
       line-height: 1.25;
       letter-spacing: -0.02em;
-      margin-bottom: 0;
+      margin-bottom: 8px;
     }
 
     .hero h1 em {
@@ -121,77 +97,21 @@
       color: var(--purple);
     }
 
-    .hero-bottom {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .hero-meta {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .hero-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .hero-meta-item .label {
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .hero-subtitle {
       color: var(--mid);
+      font-size: 15px;
+      max-width: 600px;
     }
 
-    .hero-meta-item .value {
-      font-size: 13px;
-      color: var(--white);
-      font-weight: 500;
-    }
-
-    .apply-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      color: var(--black);
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      padding: 12px 24px;
-      border-radius: 2px;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-      flex-shrink: 0;
-    }
-
-    .apply-btn:hover {
-      background: var(--purple);
-    }
-
-    /* ── LAYOUT ───────────────────────────────────────────── */
     .container {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 48px;
     }
 
-    /* ── SECTION ──────────────────────────────────────────── */
     .section {
       padding: 48px 0;
-      border-bottom: 1px solid rgba(36,31,35,0.1);
     }
-
-    .section:last-of-type { border-bottom: none; }
 
     .section-label {
       font-size: 10px;
@@ -201,293 +121,64 @@
       margin-bottom: 18px;
     }
 
-    .section h2 {
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 2px;
+      margin-top: 4px;
+    }
+
+    .role-card {
+      background: var(--white);
+      padding: 32px;
+      border-radius: 2px;
+      text-decoration: none;
+      color: var(--black);
+      transition: transform 0.15s;
+      display: block;
+    }
+
+    .role-card:hover {
+      transform: translateX(3px);
+    }
+
+    .role-card h2 {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 18px;
       letter-spacing: -0.01em;
       color: var(--black);
-      margin-bottom: 18px;
+      margin-bottom: 8px;
     }
 
-    .section p {
-      color: #4a4549;
-      margin-bottom: 14px;
-      max-width: none;
-    }
-
-    .section p:last-child { margin-bottom: 0; }
-
-    /* ── CALLOUT BOX ──────────────────────────────────────── */
-    .callout {
-      background: var(--black);
-      color: var(--white);
-      padding: 28px 32px;
-      border-radius: 3px;
-      margin: 24px 0 0;
-    }
-
-    .callout .callout-label {
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--purple);
-      margin-bottom: 10px;
-    }
-
-    .callout p {
-      color: rgba(255,255,255,0.72);
-      font-size: 14px;
-      max-width: none;
-      margin: 0;
-    }
-
-    .callout strong { color: var(--white); }
-
-    /* ── NUMBERED OWNS ────────────────────────────────────── */
-    .owns-grid {
-      display: grid;
-      gap: 2px;
-      margin-top: 4px;
-    }
-
-    .own-item {
-      display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 0;
-      background: var(--white);
-      border-radius: 2px;
-      overflow: hidden;
-      transition: transform 0.15s;
-    }
-
-    .own-item:hover { transform: translateX(3px); }
-
-    .own-num {
-      background: var(--black);
-      color: var(--purple);
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 11px;
-      letter-spacing: 0.05em;
+    .role-meta {
       display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .own-content {
-      padding: 18px 22px;
-    }
-
-    .own-content strong {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      display: block;
-      margin-bottom: 4px;
-      color: var(--black);
-    }
-
-    .own-content p {
-      font-size: 13px;
-      color: #5a5560;
-      margin: 0;
-      max-width: none;
-    }
-
-    /* ── CULTURE CARDS ────────────────────────────────────── */
-    .culture-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      margin-top: 4px;
-    }
-
-    .culture-card {
-      background: var(--white);
-      padding: 24px;
-      border-radius: 2px;
-    }
-
-    .culture-card.dark {
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .culture-card.purple-bg {
-      background: var(--purple);
-    }
-
-    .culture-card .icon {
-      font-size: 22px;
+      gap: 16px;
+      flex-wrap: wrap;
       margin-bottom: 12px;
-      display: block;
     }
 
-    .culture-card h3 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .culture-card.dark h3 { color: var(--white); }
-
-    .culture-card p {
-      font-size: 12.5px;
-      color: #5a5560;
-      margin: 0;
-      max-width: none;
-    }
-
-    .culture-card.dark p { color: rgba(255,255,255,0.6); }
-
-    /* ── HORIZON CARDS ────────────────────────────────────── */
-    .horizon-grid {
-      display: grid;
-      gap: 2px;
-      margin-top: 4px;
-    }
-
-    .horizon-card {
-      background: var(--white);
-      padding: 22px 24px;
-      border-radius: 2px;
-      display: grid;
-      grid-template-columns: 3px 1fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    .horizon-card .accent-bar {
-      background: var(--purple);
-      border-radius: 2px;
-    }
-
-    .horizon-card-body strong {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      display: block;
-      margin-bottom: 5px;
-      color: var(--black);
-    }
-
-    .horizon-card-body p {
-      font-size: 13px;
-      color: #5a5560;
-      margin: 0;
-      max-width: none;
-    }
-
-    /* ── 90 DAYS ──────────────────────────────────────────── */
-    .ninety-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-top: 4px;
-    }
-
-    .ninety-item {
-      background: var(--white);
-      padding: 24px 22px 24px 22px;
-      border-radius: 2px;
-      position: relative;
-      border-top: 3px solid var(--mint);
-    }
-
-    .ninety-item p {
-      font-size: 13px;
-      color: #5a5560;
-      margin: 0;
-      max-width: none;
-    }
-
-    /* ── TOOLS ────────────────────────────────────────────── */
-    .tools-box {
-      background: var(--black);
-      padding: 32px;
-      border-radius: 3px;
-      border-left: 3px solid var(--mint);
-      margin-top: 4px;
-    }
-
-    .tools-box p {
-      color: rgba(255,255,255,0.68);
-      max-width: none;
-      margin: 0;
-      font-size: 14px;
-    }
-
-    .tools-box strong { color: var(--mint); }
-
-    /* ── KEY SKILLS ───────────────────────────────────────── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      margin-top: 4px;
-    }
-
-    .skill-card {
-      background: var(--white);
-      padding: 24px 22px;
-      border-radius: 2px;
-    }
-
-    .skill-num {
+    .role-meta span {
+      font-size: 12px;
+      color: var(--mid);
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--purple);
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
-    }
-
-    .skill-label {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--black);
-      margin-bottom: 8px;
-    }
-
-    .skill-card p {
-      font-size: 12.5px;
-      color: #5a5560;
-      margin: 0;
-      max-width: none;
-    }
-
-    /* ── REQUIREMENTS ─────────────────────────────────────── */
-    .req-list {
-      list-style: none;
-      display: grid;
-      gap: 0;
-      margin-top: 8px;
-      border-top: 1px solid rgba(36,31,35,0.08);
-    }
-
-    .req-list li {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      align-items: start;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(36,31,35,0.08);
-      font-size: 13.5px;
-      color: #4a4549;
-      gap: 4px;
-    }
-
-    .req-list li .num {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--purple);
       letter-spacing: 0.05em;
-      padding-top: 3px;
-      font-weight: 500;
     }
 
-    /* ── FOOTER ───────────────────────────────────────────── */
+    .role-card p {
+      font-size: 13px;
+      color: #5a5560;
+      margin-bottom: 16px;
+    }
+
+    .role-cta {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--purple);
+      letter-spacing: 0.04em;
+    }
+
     footer {
       background: var(--black);
       padding: 40px 48px;
@@ -521,7 +212,6 @@
 
     footer a:hover { text-decoration: underline; }
 
-    /* ── ANIMATIONS ───────────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -534,25 +224,17 @@
     .hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
     .hero-inner > *:nth-child(2) { animation-delay: 0.12s; }
     .hero-inner > *:nth-child(3) { animation-delay: 0.20s; }
-    .hero-inner > *:nth-child(4) { animation-delay: 0.28s; }
-    .hero-inner > *:nth-child(5) { animation-delay: 0.36s; }
-
-    @media (max-width: 900px) {
-      .culture-grid, .skills-grid { grid-template-columns: 1fr 1fr; }
-      .ninety-grid { grid-template-columns: 1fr 1fr; }
-    }
 
     @media (max-width: 640px) {
       .container { padding: 0 24px; }
-      .hero { padding: 40px 24px 44px; }
-      .culture-grid, .ninety-grid, .skills-grid, .req-cols { grid-template-columns: 1fr; }
+      .hero-inner { padding: 0 24px; }
+      .roles-grid { grid-template-columns: 1fr; }
       footer { padding: 36px 24px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── HERO ──────────────────────────────────────────── -->
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-top">
@@ -562,243 +244,39 @@
       <div class="badge"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M0 0H18V18H0V0Z" fill="#FB651E"/><path d="M8.39429 10.1783L5.30469 4.39062H6.71663L8.53407 8.05334C8.56205 8.11859 8.59468 8.18616 8.63195 8.25605C8.66921 8.32595 8.70184 8.39823 8.72975 8.47276C8.74845 8.50074 8.76237 8.52634 8.77173 8.54968C8.78108 8.57288 8.79036 8.59398 8.79971 8.61254C8.84461 8.70202 8.88658 8.79293 8.92557 8.88514C8.96284 8.97373 8.99539 9.0553 9.02331 9.12983C9.09791 8.97134 9.17947 8.80126 9.26799 8.61957C9.35659 8.43781 9.44743 8.24902 9.54059 8.05334L11.386 4.39062H12.7002L9.5825 10.2482V13.9809H8.39422L8.39429 10.1783Z" fill="white"/></svg> YC X25 &nbsp;·&nbsp; London</div>
     </div>
 
-    <h1>AI Customer <em>Success</em> Manager</h1>
-
-    <div class="hero-bottom">
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <span class="label">Location</span>
-          <span class="value">London, UK</span>
-        </div>
-        <div class="hero-meta-item">
-          <span class="label">Type</span>
-          <span class="value">Full-time · In person</span>
-        </div>
-        <div class="hero-meta-item">
-          <span class="label">Team</span>
-          <span class="value">Customer Success</span>
-        </div>
-        <div class="hero-meta-item">
-          <span class="label">Stage</span>
-          <span class="value">Early - high impact</span>
-        </div>
-      </div>
-      <a href="https://throxy.com" target="_blank" class="apply-btn">
-        Visit throxy.com ↗
-      </a>
-    </div>
+    <h1>Join <em>Throxy</em></h1>
+    <p class="hero-subtitle">We're building the future of outbound sales. These are the roles we're hiring for right now.</p>
   </div>
 </header>
 
-<!-- ── ABOUT ──────────────────────────────────────────── -->
 <section class="section">
   <div class="container">
-    <div class="section-label">About the Role</div>
-    <h2>The primary relationship owner for every client we have:</h2>
-    <p>We are hiring a Customer Success Manager at Throxy: someone who will manage a portfolio of accounts, ensuring every client gets maximum value from our SDR teams and outbound sales engine. Your mission is simple - grow revenue, retain clients, and make every stakeholder feel like Throxy is the best decision they ever made.</p>
-    <p>This role sits at the intersection of sales, operations, and relationship management. You will work closely with our Growth, Product, and Operations teams to translate client needs into action, whether refining a campaign, escalating an issue, or proactively identifying an upsell opportunity.</p>
-
-    <div class="callout">
-      <div class="callout-label">North Star KPIs</div>
-      <p><strong>Client retention, net revenue retention (NRR), and CSAT.</strong> We want clients to stay, expand, and refer others. The best signal that you're doing your job well is that clients actively choose to grow with us.</p>
+    <div class="section-label">Open Roles</div>
+    <div class="roles-grid">
+      <a href="/ai-customer-success-manager/" class="role-card">
+        <h2>AI Customer Success Manager</h2>
+        <div class="role-meta">
+          <span>London, UK</span>
+          <span>Full-time - In person</span>
+          <span>Customer Success</span>
+        </div>
+        <p>The primary relationship owner for every client we have. Manage a portfolio of accounts, grow revenue, retain clients, and make every stakeholder feel like Throxy is the best decision they ever made.</p>
+        <span class="role-cta">View role ↗</span>
+      </a>
+      <a href="/software-engineer-fullstack/" class="role-card">
+        <h2>Software Engineer - Fullstack</h2>
+        <div class="role-meta">
+          <span>London, UK</span>
+          <span>Full-time - On-site</span>
+          <span>Engineering</span>
+        </div>
+        <p>Work across the entire stack, from crafting polished user interfaces to designing the APIs and systems that power them. Own problems end-to-end in a small, AI-native engineering team.</p>
+        <span class="role-cta">View role ↗</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ── CULTURE ────────────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Our Culture</div>
-    <h2>High ownership. No passengers:</h2>
-    <div class="culture-grid">
-      <div class="culture-card dark">
-        <span class="icon">⚡</span>
-        <h3>Founder-level agency</h3>
-        <p>There is no bureaucracy here. If you see a problem, you fix it. If you have a better idea, you say so. We expect everyone to operate like a founder, not an employee waiting to be told what to do.</p>
-      </div>
-      <div class="culture-card">
-        <span class="icon">📊</span>
-        <h3>Data-driven, not data-obsessed</h3>
-        <p>Numbers matter, but so does judgment. We care about doing the right thing for clients even when the spreadsheet doesn't tell you to. Direct communication, real accountability.</p>
-      </div>
-      <div class="culture-card purple-bg">
-        <span class="icon">🤖</span>
-        <h3>Genuinely AI-native</h3>
-        <p>We are excited about what AI makes possible. If you find a new tool on Monday and have it in your workflow by Friday, you will fit right in. We adopt fast and we expect the same.</p>
-      </div>
-      <div class="culture-card">
-        <span class="icon">🚀</span>
-        <h3>Fast, early, important</h3>
-        <p>YC-backed, early stage, with real clients and real revenue. Your work directly shapes how the company operates at a moment where every decision compounds.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── TOOLS ──────────────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Tools</div>
-    <h2>The best stack. No compromises:</h2>
-    <div class="tools-box">
-      <p>Our primary platform is <strong>Throxy.com</strong> - our internal super app where operations, client data, and campaign management all live in one place. Beyond that, we are deeply AI-native: we move fast, adopt the best tools available, and expect everyone on the team to do the same. From <strong>Claude</strong> to <strong>Raycast</strong> to <strong>Fathom</strong>, we are always looking for technology that removes friction and raises the bar on what's possible.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHAT YOU OWN ───────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Ownership</div>
-    <h2>What you will own:</h2>
-    <div class="owns-grid">
-      <div class="own-item">
-        <div class="own-num">01</div>
-        <div class="own-content">
-          <strong>Client Portfolio Management</strong>
-          <p>Own a book of accounts end-to-end, from onboarding through renewal and expansion. You are the single point of contact for your clients and responsible for their long-term health.</p>
-        </div>
-      </div>
-      <div class="own-item">
-        <div class="own-num">02</div>
-        <div class="own-content">
-          <strong>Revenue Growth</strong>
-          <p>Identify and execute upsell and cross-sell opportunities within your portfolio. Partner with the Growth team to surface expansion opportunities at the right moment in the client lifecycle.</p>
-        </div>
-      </div>
-      <div class="own-item">
-        <div class="own-num">03</div>
-        <div class="own-content">
-          <strong>Stakeholder Management</strong>
-          <p>Build deep relationships across multiple levels of each client organisation, from day-to-day contacts to executive sponsors. Understand each stakeholder's priorities and communicate accordingly.</p>
-        </div>
-      </div>
-      <div class="own-item">
-        <div class="own-num">04</div>
-        <div class="own-content">
-          <strong>Campaign Optimisation</strong>
-          <p>Work with our Operations and SDR teams to continuously improve campaign performance. Translate client feedback into actionable briefs and hold teams accountable to outcomes.</p>
-        </div>
-      </div>
-      <div class="own-item">
-        <div class="own-num">05</div>
-        <div class="own-content">
-          <strong>Proactive Communication</strong>
-          <p>Don't wait for clients to come to you. Send regular performance updates, flag risks early, and celebrate wins. Make every client feel informed, valued, and confident in Throxy's ability to deliver.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 90 DAYS ────────────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">First 90 Days</div>
-    <h2>What success looks like:</h2>
-    <div class="ninety-grid">
-      <div class="ninety-item">
-        <p>Full audit of your client portfolio completed with a clear view of health, risk, and opportunity across every account.</p>
-      </div>
-      <div class="ninety-item">
-        <p>Every client has had a structured onboarding or re-engagement conversation with clear goals and success metrics defined.</p>
-      </div>
-      <div class="ninety-item">
-        <p>At least one upsell or expansion opportunity identified and progressed within your portfolio.</p>
-      </div>
-      <div class="ninety-item">
-        <p>Client satisfaction scores trending upward and churn risk materially reduced across your book.</p>
-      </div>
-      <div class="ninety-item">
-        <p>Deeply embedded in Throxy's operational rhythm and acting as a reliable bridge between clients and internal teams.</p>
-      </div>
-      <div class="ninety-item" style="background: var(--black); border-top-color: var(--purple);">
-        <p style="color: rgba(255,255,255,0.5); font-size:12px; font-style:italic;">More to be defined together as you learn the role and the business.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHAT WE'RE BUILDING ────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">On the Horizon</div>
-    <h2>What we're building towards:</h2>
-    <div class="horizon-grid">
-      <div class="horizon-card">
-        <div class="accent-bar"></div>
-        <div class="horizon-card-body">
-          <strong>Automated Client Health Scoring</strong>
-          <p>A real-time dashboard surfacing at-risk accounts before they churn, giving you early warning signals and recommended actions so you can intervene proactively.</p>
-        </div>
-      </div>
-      <div class="horizon-card">
-        <div class="accent-bar"></div>
-        <div class="horizon-card-body">
-          <strong>Personalised QBR Templates</strong>
-          <p>Auto-generated quarterly business review decks pre-populated with client-specific campaign data, so you spend your time on insight rather than pulling numbers together.</p>
-        </div>
-      </div>
-      <div class="horizon-card">
-        <div class="accent-bar"></div>
-        <div class="horizon-card-body">
-          <strong>Expansion Playbooks</strong>
-          <p>Structured, data-driven frameworks that identify the right moment and the right pitch to expand a client's engagement with Throxy, turning instinct into a repeatable system.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── KEY SKILLS ──────────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Key Skills</div>
-    <h2>Highly valued for this role:</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-num">01</div>
-        <div class="skill-label">Multi-tasking</div>
-        <p>Managing several accounts at once without losing quality or dropping context on any of them.</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-num">02</div>
-        <div class="skill-label">Organisational Skills</div>
-        <p>Keeping tasks, timelines, and client commitments structured and visible across a busy portfolio.</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-num">03</div>
-        <div class="skill-label">Communication</div>
-        <p>Clear, confident communicator across all levels. Additional languages are a meaningful plus.</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-num">04</div>
-        <div class="skill-label">Growth / CS Experience</div>
-        <p>Prior exposure to outbound sales, account management, or customer success in a commercial environment.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── REQUIREMENTS ───────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Requirements</div>
-    <h2>What we are looking for:</h2>
-    <ol class="req-list">
-      <li><span class="num">01</span>2+ years in Customer Success, Account Management, or a client-facing commercial role</li>
-      <li><span class="num">02</span>Proven ability to manage a large portfolio simultaneously without dropping the ball on any account</li>
-      <li><span class="num">03</span>Exceptional stakeholder management, comfortable navigating complex organisations at every level</li>
-      <li><span class="num">04</span>High agency and ownership mindset: you identify the problem and go fix it</li>
-      <li><span class="num">05</span>Strong commercial instinct with the ability to identify and close expansion opportunities</li>
-      <li><span class="num">06</span>Outstanding written and verbal communication, always appropriate for the audience</li>
-      <li><span class="num">07</span>Comfortable in a fast-paced, high-growth environment where priorities shift and ambiguity is the norm</li>
-      <li><span class="num">08</span>Curiosity and openness to using AI tools to improve your own output and efficiency</li>
-    </ol>
-  </div>
-</section>
-
-<!-- ── FOOTER ─────────────────────────────────────────── -->
 <footer>
   <div class="footer-inner">
     <a href="https://throxy.com" target="_blank">
